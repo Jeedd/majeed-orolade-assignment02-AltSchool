@@ -13,13 +13,13 @@ const assignment = {};
  * @param {Array} arrayOfNumbers the array of numbers to sum
  * @returns number the sum of the numbers
  */
-function sumOfNumbers(num) {
-  let arrayOfNumbers = 0;
-  for (let i in num) {
-    arrayOfNumbers += num[i];
+function sumOfNumbers(arrayOfNumbers) {
+  let result = 0;
+  for (let i in arrayOfNumbers) {
+    result += arrayOfNumbers[i];
         
     }
-    return arrayOfNumbers
+    return result;
 }
 console.log(sumOfNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 
@@ -33,14 +33,14 @@ console.log(sumOfNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
  * @param {Array} arrayOfNumbers the array containing even or non-even numbers
  * @returns number the count of even numbers
  */
-function countEvenNumbers(num) {
-  let arrayOfNumbers = [];
-  for (let i = 0; i < num.length; i++) {
-    if (num[i] % 2 === 0) {
-      arrayOfNumbers.push(num[i]);
+function countEvenNumbers(arrayOfNumbers) {
+  let resultOfEvenNumber = [];
+  for (let i = 0; i < arrayOfNumbers.length; i++) {
+    if (arrayOfNumbers[i] % 2 === 0) {
+      resultOfEvenNumber.push(arrayOfNumbers[i]);
     }
   }
-  return arrayOfNumbers.length
+  return resultOfEvenNumber.length
 }
 
 console.log(countEvenNumbers([1, 2, 7, 8, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 13, 0, 3]))
@@ -59,13 +59,13 @@ console.log(countEvenNumbers([1, 2, 7, 8, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 13, 0
  * @param {Array} arrayOfNumbers the array containing temperatures in Celsius to be converted
  * @returns Array the converted temperatures in Fahrenheit
  */
-function celsiusToFahrenheit(num) {
-    let arrayOfNumbers = [];
-    for (let i = 0; i < num.length; i++) {
-      let fahrenheit = (num[i] * (9/5)) + 32;
-    arrayOfNumbers.push(Math.trunc(fahrenheit))
+function celsiusToFahrenheit(arrayOfNumbers) {
+    let convertedFahrenheit = [];
+    for (let i = 0; i < arrayOfNumbers.length; i++) {
+      let fahrenheit = (arrayOfNumbers[i] * (9/5)) + 32;
+    convertedFahrenheit.push(Math.trunc(fahrenheit))
     }
-    return arrayOfNumbers;
+    return convertedFahrenheit;
 }
 console.log(celsiusToFahrenheit([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 // assignment.celsiusToFahrenheit = celsiusToFahrenheit;
